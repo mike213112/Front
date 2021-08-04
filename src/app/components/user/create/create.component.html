@@ -1,0 +1,51 @@
+<div class="create">
+<!--  <form class="example-form">-->
+<!--    <mat-form-field class="example-full-width" appearance="fill">-->
+<!--      <mat-label>First Name</mat-label>-->
+<!--      <input type="text" matInput [formControl]="firstname"-->
+<!--             placeholder="Ex. pat@example.com">-->
+<!--      <mat-hint>Errors appear instantly!</mat-hint>-->
+<!--      <mat-error *ngIf="firstname.hasError('email') && !firstname.hasError('required')">-->
+<!--        Please enter a valid email address-->
+<!--      </mat-error>-->
+<!--      <mat-error *ngIf="firstname.hasError('required')">-->
+<!--        Email is <strong>required</strong>-->
+<!--      </mat-error>-->
+<!--    </mat-form-field>-->
+<!--  </form>-->
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>First Name</mat-label>
+      <input matInput name="first_name" #first_name="ngModel" [(ngModel)]="user.first_name" placeholder="Mike">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Last Name</mat-label>
+      <input matInput name="last_name" #last_name="ngModel" [(ngModel)]="user.last_name" placeholder="Mazariegos">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Position</mat-label>
+      <input matInput name="position" #position="ngModel" [(ngModel)]="user.position" placeholder="Developer">
+    </mat-form-field>
+
+<!--    <mat-form-field class="example-full-width2" appearance="fill">-->
+<!--      <mat-label>Avatar</mat-label>-->
+<!--      <input matInput id="avatar" name="avatar" #avatar="ngModel" [(ngModel)]="user.avatar" type="file" (click)="openBottomSheet($event)" placeholder="Mazariegos">-->
+      <input (change)="openBottomSheet($event)" type="file">
+<!--    </mat-form-field>-->
+
+    <mat-form-field class="example-full-width" appearance="fill">
+<!--      <mat-label>Last Name</mat-label>-->
+      <input matInput name="publication" #publication="ngModel" [(ngModel)]="user.publication" type="file" (click)="openBottomSheet($event)" placeholder="Mazariegos">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Comment</mat-label>
+      <input matInput name="comment" #comment="ngModel" [(ngModel)]="user.comment" placeholder="hi is text from test">
+    </mat-form-field>
+
+    <button mat-raised-button (click)="create()">Create</button>
+    <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+  </form>
+</div>

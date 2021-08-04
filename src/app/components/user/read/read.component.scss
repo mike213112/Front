@@ -1,0 +1,58 @@
+:host {
+  background: darkblue;
+}
+
+.grid {
+  // border: red solid;
+  background: #0E1734;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 5px;
+  padding: 0 80px;
+}
+
+.example-card {
+  max-width: 400px;
+  margin: 5% 0;
+  background: grey;
+  text-align: center;
+  border: black 5px solid;
+}
+
+.names {
+  color: #FFFFFF;
+}
+
+.subtitle {
+  // border: red solid;
+  color: #FFFFFF;
+  text-align: left;
+  justify-content: start;
+}
+
+.image {
+  border: black solid 3px;
+  // border: red solid;
+  // padding-right: 90px;
+}
+
+.comment {
+  // border: red solid;
+  // color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  text-align: justify;
+  color: #FFFFFF;
+}
+
+.buttons {
+  //border: blue solid;
+  //display: grid;
+  //grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+  //grid-gap: 5px;
+  display: block;
+  margin: -2% 0 0 auto;
+}

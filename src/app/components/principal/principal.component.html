@@ -1,0 +1,10 @@
+<mat-toolbar class="navbar">
+  <div (click)="read()" class="cursor">Home</div>
+  <div>
+    <span (click)="create()">Create</span>
+<!--    <span>Read</span>-->
+    <span>Update</span>
+<!--    <span>Delete</span>-->
+  </div>
+</mat-toolbar>
+<asg-read *ngIf="isHome"></asg-read>
